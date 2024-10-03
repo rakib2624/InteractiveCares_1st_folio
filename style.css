@@ -1,0 +1,362 @@
+body {
+    background-color: #333;
+    color: #fff;
+    font-family: "Nunito", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+.line {
+    height: 2px;
+    width: rem;
+    background-color: #fff;
+    border-radius: 5px;
+}
+.inner-line {
+    height: 2px;
+    width: 2rem;
+    background-color: #f44336;
+    border-radius: 5px;
+}
+/* Navbar starts */
+.navbar {
+    width: 100%;
+    padding: 0.5rem 0;
+    top: 0;
+    position: sticky;
+    backdrop-filter: blur(6px);
+    background-color: rgba(34, 34, 34, 0.25);
+    border-bottom: 1px solid #555;
+    z-index: 1111;
+}
+.navbar__right {
+    display: none;
+}
+.navbar__left, .navbar__left_des {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.navbar__left {
+    justify-content: space-between;
+}
+.navbar__left_logo, .navbar__left_bars {
+    padding: 0 0.8rem;
+}
+.navbar__left_logo img {
+    border-radius: 50%;
+}
+/* ----------Responsive Navbar----------- */
+@media screen and (min-width: 480px) {
+    .navbar__left_bars {
+        display: none;
+    }
+    .navbar__right {
+        display: block;
+        color: #fff;
+    }
+    .navbar__right ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-around;
+        padding: 0;
+    }
+    .navbar__right ul li a {
+        text-decoration: none;
+        color: #fff;
+    }
+    .navbar__right ul li a:hover {
+        color: #f44336;
+        font-weight: bold;
+    }
+}
+@media screen and (min-width: 768px) {
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .navbar__right ul li{
+        padding: 0 0.5rem;
+    }
+    .navbar__left {
+        flex: 2;
+    }
+    .navbar__right {
+        flex: 3;
+    }
+}
+/*----------------- Hero section starts ------------------ */
+.hero__left {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+.hero__left img {
+    width: 100%;
+    border-radius: 5px;
+}
+.hero__right_name {
+    text-align: center;
+    letter-spacing: 0.5rem;
+}
+.hero__right_about {
+    text-align: justify;
+}
+@media screen and (min-width: 768px) {
+    .hero {
+        display: flex;
+        padding: 1rem 0;;
+        align-items: center;
+    }
+    .hero__left {
+        flex: 1;
+        padding-right: 1rem;
+    }
+    .hero__right {
+        flex: 3;
+    }
+}
+@media screen and (min-width: 992px) {
+    .hero__left {
+        flex: 2;
+    }
+    .hero__right {
+        flex: 3;
+    }
+    .hero__right_name {
+        padding-bottom: 1rem;
+        letter-spacing: 0.8rem;
+    }
+}
+/* --------------- Education Section starts ---------------- */
+.education__up {
+    width: 87px;
+    margin: 0 auto;
+    padding: 3rem 0;
+}
+
+.education__low_description,
+.expertise__low_description,
+.experiences__low_description,
+.projects__low_description
+{
+    border: 2px solid #555;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+    width: 350px;
+    margin: 2rem auto;
+}
+.education__low_description:hover,
+.expertise__low_description:hover,
+.experiences__low_description:hover,
+.projects__low_description:hover {
+    transform: translateY(-1rem);
+}
+.education__low__img,
+.expertise__low__img,
+.experiences__low__img,
+.projects__low__img
+{
+    background-color: #555;
+    padding: 1rem;
+}
+.education__low__detail,
+.expertise__low__detail,
+.experiences__low__detail,
+.projects__low__detail
+ {
+    padding-left: 0.5rem;
+}
+@media screen and (min-width: 768px) {
+    .education__up {
+        /* margin-right: 0; */
+    }
+    .education__low {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+}
+@media screen and (min-width: 992px) {
+    .education__low {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+}
+
+
+/* --------------- Expertise Section starts ---------------- */
+.expertise__up {
+    width: 84px;
+    margin: 0 auto;
+    padding: 3rem 0;
+}
+@media screen and (min-width: 768px) {
+    /* .expertise__up {
+        margin-left: 0;
+    } */
+    .expertise__low {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+}
+@media screen and (min-width: 992px) {
+    .expertise__low {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+}
+/* --------------- Experiences Section starts ---------------- */
+.experiences__up {
+    width: 105px;
+    margin: 0 auto;
+    padding: 3rem 0;
+}
+@media screen and (min-width: 768px) {
+    /* .experiences__up {
+        margin-right: 0;
+    } */
+    .experiences__low {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+}
+@media screen and (min-width: 992px) {
+    .experiences__low {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+}
+/* --------------- Projects Section starts ---------------- */
+.projects__up {
+    /* border: 2px solid red; */
+    width: 72px;
+    margin: 0 auto;
+    padding: 3rem 0;
+}
+@media screen and (min-width: 768px) {
+    /* .projects__up {
+        margin-right: 0;
+    } */
+    .projects__low {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+}
+@media screen and (min-width: 992px) {
+    .projects__low {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+}
+
+/* --------contact form--------------- */
+
+.contact {
+    width: 100%;
+    background-color: #222;
+}
+.sub-contact {
+    width: 90%;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+.contact__left {
+    text-align: center;
+    padding-bottom: 1rem;
+}
+.contact__left_low {
+    display: flex;
+    justify-content: center;
+}
+.contact__left_low-1,
+.contact__left_low-2,
+.contact__left_low-3,
+.contact__left_low-4
+{
+    padding: 1rem;
+    font-size:30px;
+}
+.contact__left_low-1:hover,
+.contact__left_low-2:hover,
+.contact__left_low-3:hover,
+.contact__left_low-4:hover {
+    color:#f44336;
+}
+.contact__left, .contact__right {
+    flex: 1;
+}
+.contact-me {
+    text-align: center;
+    padding: 1rem 0;
+}
+.contact-form {
+    margin: 0 auto;
+    text-align: center;
+    border: 2px solid #555;
+    padding: 1rem 0;
+    border-radius: 0.8rem;
+    max-width: 400px;
+    min-width: 300px;
+}
+input {
+    border: none;
+    width: 90%;
+    border-radius: 10px;
+    padding: 0.8rem 0 0.8rem 0.8rem;
+    margin: 1rem;
+}
+#message {
+    border: none;
+    width: 90%;
+    border-radius: 5px;
+    padding: 0.8rem 0 0.8rem 0.8rem;
+    margin: 1rem;
+}
+.button {
+    border: none;
+    width: 90%;
+    border-radius: 5px;
+    padding: 0.8rem 0 0.8rem 0.8rem;
+    margin: 1rem;
+    background-color: #4caf50;
+    color: #fff;
+    letter-spacing: 0.5rem;
+    transition: 0.3s all ease;
+}
+.button:hover {
+    background-color: #f44336;
+}
+
+@media screen and (min-width: 768px) {
+    .sub-contact {
+        display: flex;
+        align-items: center;
+    }
+}
+@media screen and (min-width: 992px) {
+    input {     
+        width: 300px;
+    }
+    .contact-form {
+        max-width: 700px
+    }
+}
